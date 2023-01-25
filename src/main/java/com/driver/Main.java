@@ -2,11 +2,15 @@ package com.driver;
 
 public class Main {
     public static void main(String[] args) {
-        A obj = new B();
-        String a = obj.meth();
-        System.out.println(a);
+
+        B obj = new B();
+        obj.meth();
+
+        B obj2 = new B();
+        obj2.meth();
+
     }
-    class A{
+    public static class A{
         public A() {
         }
 
@@ -16,10 +20,11 @@ public class Main {
         }
     }
 
-    class B extends A{
+    public static class B extends A{
         @Override
         public String meth(){
             return "Method is overridden in Extendend class B";
         }
     }
 }
+
